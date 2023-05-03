@@ -5,23 +5,28 @@ import org.junit.Test;
 /*
  * Declare the array
  * and loop until length-1
- * For sorted array add +1 and check
+ * For sorted array and non sorted
  */
 
 public class MissingNumber {
    @Test
    public void example1() {
-	   int[] nums= {-1,0,2,3,4,5};
+	   int[] nums= {9,6,4,2,3,5,7,0,1};
 	   Missingumber(nums);
    }
 private void Missingumber(int[] nums) {
-	
-	for (int i=0; i<nums.length;i++) {
-		int j=0;
-		 j=nums[i]+1;
-		 if(nums[i+1]!=j) {
-			 System.out.print("Missing number is :"+j);
+	int j=nums.length;
+	int left=0,right=nums.length-1;
+	while(left<right) {
+		if(nums[left]==j || nums[right]==j) {
+			j--;
+			//System.out.print("Missing number is :"+j);
+		}
+		else {
+			left++;
+			right--;
+		}
 		 }
+	 System.out.print("Missing number is :"+j);
 	}
-}
 }
