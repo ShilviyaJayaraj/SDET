@@ -27,19 +27,14 @@ public class Reverseprefix {
 				System.out.println(index);
 			}
 		}
-		//System.out.print("hi");
-		if(index>0) {
-		       for( int j=word.length()-1; j>=0; j--) {
-		    	 //  System.out.print(j);
-		    	   if(j!=index) {
-		    		   out=out+word.charAt(j);
-		    	   }
-		    	   else if(j==index) {
-		    		   out=word.charAt(j)+out;
-		    	   }
-		       }
-		       System.out.print(out);
-		}
+		
+		StringBuilder sb=new StringBuilder(word.substring(0, index+1));
+        sb.reverse();
+        if(index+1<word.length()) {
+        	sb.append(word.substring(index+1));
+        	
+        }
+        System.out.print(sb);
 	}
 
 }
