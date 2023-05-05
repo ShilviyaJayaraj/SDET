@@ -6,6 +6,7 @@ import org.junit.Test;
  * loop and find index of given character
  * create temp variable and add last index to first using 2 pointer
  * then print it
+ * use StrtingBuilder 
  */
 
 public class Reverseprefix {
