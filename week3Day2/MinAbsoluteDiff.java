@@ -1,6 +1,8 @@
 package week3Day2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -15,48 +17,76 @@ import org.junit.Test;
  */
 
 public class MinAbsoluteDiff {
-    @Test
+   @Test
     public void example1() {
-    	int[] arr= {3,8,-10,23,19,-4,-14,27};
+    	int[] arr= {4,2,1,3};
     	minAbsDiff(arr);
-    	
+    	//minDiffMethod(arr);
+    }
+ //   @Test
+    public void example2() {
+    	int[] arr= {9,4,1,7};
+    	minDiffMethod(arr);
     }
 
-	private void minAbsDiff(int[] arr) {
-		int min=0;
+	private void minDiffMethod(int[] arr) {
 		int sub=0;
-		int minval = arr[1]-arr[0];
+		int k=2;
 		int max=Integer.MAX_VALUE;
-		Arrays.sort(arr);
-		for(int i=0;i<arr.length-1; i++) {
-			
-			//System.out.println(max);
-			
-			if(arr[i]<=arr[i+1]) {
-				sub=arr[i+1]-arr[i];
-				//min=sub;
-			if(minval<sub) {
-				//min=sub;
-				minval=Math.min(sub, max);
-			}
-			else {
-				max=sub;
-				/*
-				 * minval=Math.min(min, max); min=minval; System.out.println(minval);
-				 */
-			}
-			}
+		int min=0; 
+		int minval=0;
+		if(arr.length>k) {
+			minval=arr[0]-arr[1];
+			//System.out.println("minval"+minval);
 		}
-		System.out.println(minval);
-		sub=0;
-		for(int i=0;i<arr.length-1;i++) {
-			sub=arr[i+1]-arr[i];
-			if(sub==minval) {
-				System.out.print(arr[i]+","+arr[i+1]+",");
+		//min=minval;
+		//System.out.println(min);
+		for(int i=0; i<arr.length-1;i++) {
+			for(int j=i+1;j<arr.length; j++) {  
+			//	System.out.println("i-"+arr[i]+"j-"+arr[j]); // 9,4,1,7
+				if(arr[i]<arr[j])
+				{
+					sub=arr[j]-arr[i];
+					if(sub<minval) {
+						min=Math.min(max, sub);
+						//System.out.print("if"+min);
+						minval=min;
+					}
+					}
+				else {
+					sub=arr[i]-arr[j];
+				//	System.out.println("i-j ="+(arr[i]-arr[j]));
+				//	System.out.println("else-minval"+minval);
+					if(sub<=minval) {
+						min=Math.min(max, sub);
+						//System.out.println("else"+min);
+						minval=min;
+					}
+					
+				}
+				}
+		}
+		System.out.println(min);
+	}
+
+	private void minAbsDiff(int[] arr) {
+		int sub=0;
+		List<List<Integer>> ls=new ArrayList<List<Integer>>();
+		int min=Integer.MAX_VALUE;
+		Arrays.sort(arr);    // 1,4,7,9
+		for(int i=0;i<arr.length-1; i++) {	
+				sub=arr[i+1]-arr[i];
+			if(sub<min) {
+				min=sub;
+				ls.clear();
+				ls.add(Arrays.asList(arr[i],arr[i+1]));
 			}
+			else if(sub==min) {
+				ls.add(Arrays.asList(arr[i],arr[i+1]));
+				
+			}
+			}
+		System.out.println(ls);
 		}
 		
-	
-		//System.out.print(Arrays.toString(arr));
 	}
-}
