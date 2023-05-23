@@ -9,7 +9,7 @@ public class LinkedListMethods {
     	linkedlist.add(each);
     	}
     	System.out.print(linkedlist);
-    	Node lout=new Node(get(2));
+    	linkedlist.get(2);
     	//System.out.println(printList());
     	//linkedlist.printList();
     }
@@ -71,7 +71,29 @@ class LinkedList{
          System.out.println();
      }
 	
-	
+	 public int indexOf(int val) {
+			int index=-1;
+			Node temp;
+			if(start==null) {
+				return index;
+			}
+			else {
+				temp=start;
+				while(temp.next!=null) {
+					index++;//1
+					if(temp.data==val) {
+						return index;
+					}
+					temp=temp.next;
+				}
+			}
+			if(temp.next==null && temp.data==val) {
+				//index++;
+				return ++index;
+			}
+			
+			return index;
+		}
 
 	@Override
 	public String toString() {
