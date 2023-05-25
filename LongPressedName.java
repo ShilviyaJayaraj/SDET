@@ -21,28 +21,23 @@ public class LongPressedName {
     	  String typed="ssaaeddee";
     	  System.out.println(longPressedNameMatch(name, typed));
       }
-     // @Test
+      @Test
       public void example3() {
     	  String name="";
     	  String typed="ssaaedd";
     	  System.out.println(longPressedNameMatch(name, typed));
       }
       
-    @Test
-      public void example4() {
-    	  String name="lenin";
-    	  String typed="lleeninee";
-    	  System.out.println(longPressedNameMatch(name, typed));
-      }
 
       
 	private Boolean longPressedNameMatch(String name, String typed) {
 		int max=Integer.max(name.length(), typed.length());
-	//	Boolean longpressed=false;
+		Boolean longpressed=false;
+		if(name.length()>0) {
 		int left=0, right=0;
 		while(right<max) {
 			if(name.charAt(left)==typed.charAt(right)) {
-				//longpressed=true;
+				longpressed=true;
 				left++;
 				right++;
 				continue;
@@ -56,6 +51,10 @@ public class LongPressedName {
 		}
 		
 	}
-		return true;
+		}
+		else {
+			System.out.print("Name is null so longpressed is ");
+		}
+		return longpressed;
 }
 }
