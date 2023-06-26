@@ -3,18 +3,41 @@ package mandatoryHomeWork.week1.day5;
 import org.junit.Test;
 
 public class Tournament {
+	
    @Test
-   public static void main(String[] args) {
+   public void example1() {
 	   int n=14;
-	   matcheswin(n);
+	   System.out.println(matcheswin(n));
+   }
+   
+   
+   @Test
+   public void example2() {
+	   int n=7;
+	   System.out.println(matcheswin(n));
    }
 
-private static void matcheswin(int n) {	
+
+ private static int matcheswin(int n) {
+	 int Matches=0;
+     int Teamadvance=0;
+     int output=0;
 	while(n>1) {
-		n=n/2;
+		if(n%2==0) {
+			Matches=(n)/2;
+			Teamadvance=n-Matches;
+		}
+		else {
+			Matches=(n-1)/2;
+			Teamadvance=n-Matches;
+		}
+		n=Teamadvance;
+		output+=Matches;
+		//System.out.print("n  - "+n);
 	}
-	System.out.print("Team and matched played are:"+n);
 	
+	return output;
+
 }
 	
 }
