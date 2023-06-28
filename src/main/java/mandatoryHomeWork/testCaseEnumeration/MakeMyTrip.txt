@@ -1,0 +1,44 @@
+1. Write test case enumeration for Book an itinerary in the Make My Trip application
+
+Field Validation: 
+  1) Verify Departure from
+  2) Verify Departure To
+  3) special special characters should not be supported for from field
+  4) special special characters should not be supported for To field
+  5) Min and Max validation
+  6) Verify Departure date
+  7) Verify Return date
+  8) Validate Travellers and class
+  9) Adults, more than 9yr check
+  10) Yr check for childer 
+  11) Yr check for infant
+  12) Verify Economy/Premium Economy
+  13) Premium Economy
+  14) Business
+  15) Verify Travellers count 
+  16) Verify, If one way is chosen then Return should be disabled
+  17) Verify Round trip
+  18) Verify Multi city, Add another city should be available
+  19) Verify fare type.
+  20) Verify Trending search
+  21) Verfiy the flights listed after the search
+  22) Verify the Airport Pick & drop section
+  23) Verify apply coupon and discount section
+  24) Verfiy the payment methods
+  25) Verify booking history
+  26) Verify cancellation of ticket booked
+  27) Verfiy confirmation email 
+  28) Verfiy user is able to modify the booking
+
+Compatability:
+  1) Verify the applications is compatible in both Mobile and web browser
+
+
+API:
+  1) Verfiy the flight Booking 
+  2) Verify the flight Search
+  3) Verify all the error handling api's
+  4) Verfiy the flight availability
+  5) Verfiy the booking modification
+  6) Verfiy the payment gateway api's
+  7) Verify the notification api's
