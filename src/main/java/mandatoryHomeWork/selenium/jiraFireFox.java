@@ -36,10 +36,10 @@ public class jiraFireFox {
 		//Login to JIRA
 		driver.get("https://comparecheck.atlassian.net/jira/software/projects/CC/boards/1");
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@name='username']"))));
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("karupasami994@gmail.com");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("shilviyajayaraj96@gmail.com");
 		driver.findElement(By.id("login-submit")).click();
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@name='password']"))));
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Kp_12101994");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("shilviya321");
 		driver.findElement(By.id("login-submit")).click();
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(" //div[text()='In Progress']"))));
 		
@@ -50,12 +50,12 @@ public class jiraFireFox {
 		driver.findElement(By.xpath("//div[contains(@id, 'issue-type-select')]")).click();
 		act.sendKeys("Task").sendKeys(Keys.ENTER).perform();
 		
-		driver.findElement(By.name("summary")).sendKeys("This is KP's Test");
+		driver.findElement(By.name("summary")).sendKeys("Test");
 		Random random = new Random();		
 		int rand = random.nextInt(ar.length);
 		driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__indicators')]")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Sathish Baskaran']"))));
-		driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Sathish Baskaran']")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Hema  Malini']"))));
+		driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Hema Malini']")).click();
 		driver.findElement(By.xpath("//div[text()='Select sprint']")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//div[text()='CC Sprint 1'])[2]"))));
 		driver.findElement(By.xpath("(//div[text()='CC Sprint 1'])[2]")).click();
@@ -72,9 +72,9 @@ public class jiraFireFox {
 		
 		//Checking if the ticket is created in the JIRA board
 		driver.get("https://comparecheck.atlassian.net/jira/software/projects/CC/boards/1");
-		driver.findElement(By.xpath("//span[contains(text(),'This is KP')]"));
+		driver.findElement(By.xpath("//span[contains(text(),'Test')]"));
 		Thread.sleep(2000);
-		WebElement drag = driver.findElement(By.xpath("//span[contains(text(),'This is KP')]/../../../.."));
+		WebElement drag = driver.findElement(By.xpath("//span[contains(text(),'Test')]/../../../.."));
 		WebElement drag4 = driver.findElement(By.xpath("//span[text()='Sprint 1 First Issue']"));
 		WebElement drag2= driver.findElement(By.xpath("(//div[@class='__board-test-hook__column sc-1ef3ied-1 cgwwdw j4whmj-0 gftcoT'])[2]"));
 		
@@ -102,7 +102,7 @@ public class jiraFireFox {
 		driver.findElement(By.xpath("(//div[@data-test-id='platform-card.ui.card.focus-container']//div)[1]")).click();
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h2[text()='Description']"))));
 		driver.findElement(By.xpath("//span[text()='Add a child issue']")).click();
-		driver.findElement(By.id("childIssuesPanel")).sendKeys("KP sub task");
+		driver.findElement(By.id("childIssuesPanel")).sendKeys("shilviya sub task");
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("(//span[text()='Create'])[2]")).click();
 //		Thread.sleep(3000);
@@ -113,7 +113,7 @@ public class jiraFireFox {
 		driver.findElement(By.xpath("(//a[@data-test-id='issue.issue-view.views.common.issue-line-card.issue-line-card-view.key'])[last()]")).click();
 		
 		
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h1[text()='KP sub task']"))));
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h1[text()='shilviya sub task']"))));
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//span[text()='Add a description...']) | // span[@data-testid='placeholder-test-id']")).click();
 		Thread.sleep(2000);
@@ -124,8 +124,8 @@ public class jiraFireFox {
 		
 		// ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", By.xpath("//span[text()='Unassigned']"));
 		driver.findElement(By.xpath("//span[text()='Unassigned']")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Sathish Baskaran']"))));
-		driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Sathish Baskaran']")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Hema  Malini']"))));
+		driver.findElement(By.xpath("//div[contains(@class,'fabric-user-picker__option')]//span//div//div//span[text()='Hema  Malini]")).click();
 		
 		// ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", By.xpath("(//h2[text()='Labels']/following::span[text()='None'] )[1]"));
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//h2[text()='Labels']/following::span[text()='None'] )[1]")))).click();
@@ -138,10 +138,10 @@ public class jiraFireFox {
 		
 		driver.findElement(By.xpath("//input[@placeholder='Add a comment…']")).click();
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//p[contains(.,'Type @ to mention and notify someone.')]"))));
-		driver.findElement(By.xpath("//p[contains(.,'Type @ to mention and notify someone.')]")).sendKeys("This is KP comment");
+		driver.findElement(By.xpath("//p[contains(.,'Type @ to mention and notify someone.')]")).sendKeys("shilviya comment");
 		driver.findElement(By.xpath("//span[text()='Save']")).click();
 		
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[text()='Karupasami']/following::p[text()='This is KP comment']"))));
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[text()='Karupasami']/following::p[text()='shilviya comment']"))));
 		
 		    StringSelection str = new StringSelection("C:\\Users\\DELL\\Downloads\\Testdoc.txt");
 		    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str,null);
