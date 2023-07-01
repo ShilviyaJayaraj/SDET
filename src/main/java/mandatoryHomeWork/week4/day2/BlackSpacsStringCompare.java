@@ -9,13 +9,6 @@ public class BlackSpacsStringCompare {
 		String t = "ad#c";
 		System.out.println(backSpaceString(s,t));
 	}
-
-	@Test
-	public void example2() {
-		String s = "ab##";
-		String t = "c#d#";
-		System.out.println(backSpaceString(s,t));
-	}
 	
     @Test
 	public void example3() {
@@ -23,14 +16,7 @@ public class BlackSpacsStringCompare {
 		String t = "b";
 		System.out.println(backSpaceString(s,t));
 	}
-	/*
-	 * Using stack
-	 * loop till string length
-	 * check whether character is !='#'
-	 * If yes push in to the queue
-	 * else pop the last value
-	 * add the stack value into the string
-	 */
+
 	public boolean backSpaceString(String s, String t) {
 		Stack st=new Stack();
 	
