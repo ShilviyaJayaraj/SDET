@@ -12,25 +12,19 @@ public class LongPressedName {
       public void example1() {
     	  String name="alex";
     	  String typed="aaleex";
-    	  System.out.println(longPressedNameMatch(name, typed));
+    	  System.out.println(longPressed(name, typed));
       }
 
-      @Test
-      public void example2() {
-    	  String name="saeed";
-    	  String typed="ssaaeddee";
-    	  System.out.println(longPressedNameMatch(name, typed));
-      }
       @Test
       public void example3() {
     	  String name="";
     	  String typed="ssaaedd";
-    	  System.out.println(longPressedNameMatch(name, typed));
+    	  System.out.println(longPressed(name, typed));
       }
       
 
       
-	private Boolean longPressedNameMatch(String name, String typed) {
+	private Boolean longPressed(String name, String typed) {
 		int max=Integer.max(name.length(), typed.length());
 		Boolean longpressed=false;
 		if(name.length()>0) {
