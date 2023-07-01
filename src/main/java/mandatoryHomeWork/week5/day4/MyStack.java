@@ -4,69 +4,41 @@ import java.util.*;
 import org.junit.Test;
 
 public class MyStack {
-	Queue<Integer> q1 = new ArrayDeque<Integer>();
-	Queue<Integer> q2 = new ArrayDeque<Integer>();
+
+	public static void main(String[] args) {
+		MyStack obj1 = new MyStack();
+		 
+		 obj1.push(1);
+		 obj1.push(2);
+		 int p2 = obj.pop();
+		 int p3 = obj.top();
+		 boolean p4 = obj.empty();
+	}
 	
-	 public MyStack() {
-	        
-	    }
-	    
-	 //keep on push in the 1st queue
-	    public void push(int x) {
-	        q1.add(x);
-	        
-	        //while(q1.size()!=0) {
-	        	//q2.push(q1.pop());
-	        //}
-	    }
-	    
-	    //empty q1 and add it in q2 and then pop out
-	    public int pop() {
-	    	
-	        /*while(q1.size()!=0) {
-	        	q2.push(q1.pop());
-	        }*/
-	        return q1.remove();
-	    }
-	    
-	    public int top() {
-	        //return q2.size();
-	    	return q2.peek();
-	    	
-	    }
-	    
-	    public boolean empty() {
-	        if(q2.size()==0) {
-	        	return true;
-	        }
-	        return false;
-	    }
-	    
-	    @Test
-	    public void test() {
-	    	q1.add(1);
-	    	q1.add(2);
-	    	q1.add(3);
-	    	q1.add(4);
-	    	q1.add(5);
-	    	
-	    	System.out.println(q1.remove());
-	    	System.out.println(q1.remove());
-	    }
-	   /* public static void main(String[] args) {
-	    	
-	    	MyStack st=new MyStack();
-	    	st.push(1);
-	    	st.push(2);
-	    	System.out.println(st.q1.pop());
-	    	//st.push(3);
-	    	
-	    	//System.out.println(st.pop());
-	    	//System.out.println(st.pop());
-	    	//System.out.println(st.pop());
-	    	
-	    	//System.out.println(st.top());
-	    	
-	    	System.out.println(st.empty());
-	    	*/
+	  Queue<Integer> st = new ArrayDeque<>();
+		    public MyStack() {
+		    	
+		    }
+		    public void push(int x) {
+		    	st.add(x);
+					for(int i = 1;i<st.size();i++) {
+		    		st.add(st.remove());
+		    	}
+		    }
+		    
+		    public int pop() {   	
+				return st.remove();   
+		    }
+		  
+		    public int top() {
+				return st.peek();
+		        
+		    }
+		    public boolean empty() {
+		    	if(st.isEmpty()) {
+		    		return true;
+		    	}
+				return false;
+		        
+		    }
 }
