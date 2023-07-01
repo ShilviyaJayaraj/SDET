@@ -9,13 +9,6 @@ public class BlackSpacsStringCompare {
 		String t = "ad#c";
 		System.out.println(backSpaceString(s,t));
 	}
-	
-    @Test
-	public void example3() {
-		String s = "a#c";
-		String t = "b";
-		System.out.println(backSpaceString(s,t));
-	}
 
 	public boolean backSpaceString(String s, String t) {
 		Stack st=new Stack();
