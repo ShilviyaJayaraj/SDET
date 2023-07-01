@@ -9,27 +9,13 @@ public class ReverseAlphabets {
 		System.out.println(reversAlpha(s));
 	}
 	
-	@Test
-	public void negative() {
-		String s = "&%^$&(()*";
-		System.out.println(reversAlpha(s));
-	}
 	
     @Test
 	public void edge() {
     	String s = "abcfh*jllll";
 		System.out.println(reversAlpha(s));
 	}
-    /*
-     * 2 pointer in opposite direction
-     * Add the string in StringBuider
-     * left=0 and right=str.length()-1
-     * loop till left crosses right
-     * check if the left and right index values are letter. If yes swap and increment left and decrement right
-     * else check if left value is not a letter.If yes, increment left
-     * else check if right value is not a letter.If yes, decrement right
-     * return the StringBuider
-     */
+    
     //Time Complexity --> O(n/2)-->O(n)
     //Space Complexity --> O(n)
     private String reversAlpha(String s) {
