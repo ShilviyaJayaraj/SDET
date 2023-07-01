@@ -4,14 +4,12 @@ import mandatoryHomeWork.week4.day1.linkedList.Node;
 
 public class LinkedListMethods {
     public static void main(String[] args) throws Exception {
-    	LinkedList linkedlist=new LinkedList();
+    	LinkedList linked=new LinkedList();
     	for(int each:new int[] {1,2,3,4}) {
-    	linkedlist.add(each);
+    	linked.add(each);
     	}
-    	System.out.print(linkedlist);
-    	linkedlist.get(2);
-    	//System.out.println(printList());
-    	//linkedlist.printList();
+    	System.out.print(linked);
+    	linked.get(2);
     }
 	}	
 
