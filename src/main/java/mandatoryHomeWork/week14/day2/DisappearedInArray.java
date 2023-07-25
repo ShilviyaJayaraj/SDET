@@ -1,8 +1,6 @@
 package mandatoryHomeWork.week14.day2;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 import org.junit.Test;
 
@@ -29,7 +27,6 @@ public class DisappearedInArray {
 
 	
 	private HashSet<Integer> disappearedNums(int[] nums) {
-		List<Integer> ls=new ArrayList<>();
 		HashSet<Integer> hs=new HashSet<>();
 		int length=nums.length;
 		for(int i=1;i<=length;i++) {
