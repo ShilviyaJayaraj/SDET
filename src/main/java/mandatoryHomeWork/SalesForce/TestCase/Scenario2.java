@@ -11,8 +11,8 @@ public class Scenario2 {
 		
 		driver.get("https://google-bf-dev-ed.develop.my.salesforce.com/");
 
-		driver.findElement(By.id("username")).sendKeys("muthusubramanian91@sdet.testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("TestLeaf@1012");
+		driver.findElement(By.id("username")).sendKeys("shilviya");
+		driver.findElement(By.id("password")).sendKeys("TestLeaf");
 		driver.findElement(By.id("Login")).click();
         driver.findElement(By.className("slds-r5")).click();
         driver.findElement(By.xpath("//button[text()='View All']")).click();
