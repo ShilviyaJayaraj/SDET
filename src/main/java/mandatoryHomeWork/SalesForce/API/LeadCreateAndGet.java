@@ -1,7 +1,7 @@
 package API;
 
 
-public class LeadCreateAndGet {
+public class LeadCreate {
 	
 	public static PoJoLead lead() {
 		
